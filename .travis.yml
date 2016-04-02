@@ -14,6 +14,14 @@ install:
 - bower install
 script:
 - npm test
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 deploy:
   api_key:
     secure: Kupv0zMCOfESD2mRmHpsVp7j5bcsdh4lGweJuiDED/+BtJMXuRbv+9UcIbUL/3b55nJv59r4oXx/ufKc4LBK8BfRTP7eLZTStjK8Oh6TFSnADI4PJ/cXoS/JkTAMiOC1ODzIjrVDtuMKSvdGw+sG8EXI6lIWE6xS0n+4+xsVccugxRL7AYta3bS3EIkdgjhtYzBp/8DzN/gsGHnZ8lNaw2Y6oZXzIYLLn8GA6ZuOoFQaM4wm/SlNw3v8Z0+rGF9dqqQqXZW46D1YyMnzEdxv50TsyavhJNLPpax5Yj5o4JfFcOxaGMGOtVptgYos0SoGt3fO2X54iXWoEZBN2bHU2PMriWph/3jukcar50bVoq/fPZgmhoiccIH6O/bXj9NT2Lj3BJlxbgsrzeGxJOoprnmT5SpYDKyafrWadWGuwL9VGnkI7RV4oz0nc8Zm+4RXJwBwuzB2LhCSxen8JZOwXbqO40n2Gz9ZrBZf1cYiMEV0b91ySQ5r7Q6EsKVYbVVI0EgSLClm2fmxxQ0Kibf6fkuNThxNtJq5ChBpiAP4odmSousz7AMimlBG7jbWhRy6SK90GmwF8dy7Wrk7kyKF72KrlLEkH9WxZINnX1ca+u8UqSi2PdrjodIsiRya2j21QV4WeSLTT4U9T3/z73Tf22+oy5C3tGkcmuWEH7EvIZ4=
