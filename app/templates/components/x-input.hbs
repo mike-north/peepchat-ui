@@ -1,0 +1,14 @@
+<input
+  value={{value}}
+  type={{type}}
+  class="{{if value
+    (concat
+      "validate"
+      " "
+      (if errors.length "invalid" "valid")
+    )}}"
+  onkeyup={{action (mut value) value='target.value'}}
+  onchange={{action (mut value) value='target.value'}}>
+<label data-error={{_errorMessages}}>
+  {{label}}{{yield}}
+</label>
