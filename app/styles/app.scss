@@ -4,3 +4,17 @@ $roboto-font-path: '/assets/';
 body {
   background-color: color('indigo', 'darken-2');
 }
+
+.material-toast.toast {
+  top: 35px;
+  opacity: 0;
+  transition: margin-top 375ms, top 300ms, opacity 300ms;
+  &.active {
+    top: 0;
+    opacity: 1
+  }
+  &.exiting {
+    opacity: 0;
+    margin-top: -40px;
+  }
+}
