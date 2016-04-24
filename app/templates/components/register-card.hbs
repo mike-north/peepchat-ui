@@ -1,7 +1,8 @@
 {{#x-card
   onsubmit=attrs.onsubmit
   title='Register with Peepchat'
-  buttonText='Register'}}
+  buttonText='Register'
+  buttonDisabled=validations.messages.length}}
   <div class="row">
     {{x-input
       value=model.email

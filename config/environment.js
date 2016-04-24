@@ -16,7 +16,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+DS: {
+  host: 'http://localhost:4000',
+  namespace: 'api'
+}
   };
 
   if (environment === 'development') {
@@ -40,7 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'https://frozen-coast-87972.herokuapp.com';
   }
 
   return ENV;
