@@ -6,7 +6,11 @@
         buttonText='Logout'
         onsubmit=(route-action 'logout')
         title='Welcome to Peepchat!'}}
-        <p>Thanks for logging in! {{user-info}}</p>
+
+        {{#user-info as |u|}}
+          Thanks for logging in <b>{{u.email}}</b>
+        {{/user-info}}
+
       {{/x-card}}
     </div>
   </div>
