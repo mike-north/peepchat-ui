@@ -4,3 +4,38 @@ $roboto-font-path: '/assets/';
 body {
   background-color: color('indigo', 'darken-2');
 }
+
+.toasts {
+  display:block;
+  position: fixed;
+  z-index: 10000;
+
+  @media #{$small-and-down} {
+    min-width: 100%;
+    bottom: 0%;
+  }
+  @media #{$medium-only} {
+    left: 5%;
+    bottom: 7%;
+    max-width: 90%;
+  }
+  @media #{$large-and-up} {
+    top: 10%;
+    right: 7%;
+    max-width: 86%;
+  }
+
+  .toast {
+    top: 35px;
+    opacity: 0;
+    transition: margin-top 375ms, top 300ms, opacity 300ms;
+    &.active {
+      top: 0;
+      opacity: 1
+    }
+    &.exiting {
+      opacity: 0;
+      margin-top: -40px;
+    }
+  }
+}
