@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m8 offset-m2">
+
+      {{#x-card
+        buttonText='Logout'
+        onsubmit=(route-action 'logout')
+        title='Welcome to Peepchat!'}}
+
+        {{#user-info as |u|}}
+          Thanks for logging in <b>{{u.email}}</b>
+        {{/user-info}}
+
+      {{/x-card}}
+    </div>
+  </div>
+</div>
