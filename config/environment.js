@@ -17,10 +17,15 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-DS: {
-  host: 'http://localhost:4000',
-  namespace: 'api'
-}
+    DS: {
+      host: 'http://localhost:4000',
+      namespace: 'api'
+    },
+    'ember-simple-auth': {
+      authenticationRoute: 'auth.login',
+      routeIfAlreadyAuthenticated: 'app.index',
+      routeAfterAuthentication: 'app.index'
+    }
   };
 
   if (environment === 'development') {
