@@ -16,7 +16,7 @@ export const password = [
 export const passwordConfirmation = [
   validator('presence', true),
   validator('confirmation', {
-    on: 'password',
+    on: 'model.password',
     message: '{description} do not match',
     description: 'Passwords'
   })
