@@ -15,7 +15,7 @@ export default Route.extend({
     return fetch(`${config.DS.host}/${config.DS.namespace}/user/current`, {
       type: 'GET',
       headers: {
-        'Authorization': this.get('session').get('session.content.authenticated.access_token')
+        'Authorization': `Bearer ${this.get('session').get('session.content.authenticated.access_token')}`
       }
     }).then((raw) => {
       return raw.json().then((data) => {
