@@ -7,10 +7,43 @@
         onsubmit=(route-action 'logout')
         title='Welcome to Peepchat!'}}
 
-        {{#user-info as |u|}}
-          Thanks for logging in <b>{{u.email}}</b>
-        {{/user-info}}
+        <ul class="collection with-header">
+          <li class="collection-header">
+            <h4>Rooms</h4>
+          </li>
+          {{#each model.rooms as |room|}}
+          <li class="collection-item avatar">
+            <i class="material-icons green circle">chat</i>
+            <span class="title">{{room.name}}</span>
+            <p class="grey-text">Owner: {{room.owner.email}}</p>
+            <span class="secondary-content">
 
+              {{!-- REMOVE ROOM BUTTON --}}
+              <i class="material-icons red-text"
+                onclick={{route-action 'removeRoom' room}}>
+                remove_circle
+              </i>
+
+            </span>
+          </li>
+          {{else}}
+            <li class="collection-item">
+              No rooms yet ☹️
+            </li>
+          {{/each}}
+        </ul>
+
+        <div class="row create-room">
+          {{x-input value=model.newRoom.name label="Room Name" classNames='col s8' errors=model.newRoom.errors}}
+          <div class="col s4">
+
+            {{!-- CREATE ROOM BUTTON --}}
+            <button class="btn-flat green white-text" onclick={{route-action 'createRoom'}}>
+              Create Room
+            </button>
+
+          </div>
+        </div>
       {{/x-card}}
     </div>
   </div>
