@@ -1,7 +1,9 @@
-# Peepchat
+# Peepchat-UI [![Build Status](https://travis-ci.org/mike-north/peepchat-ui.svg?branch=master)](https://travis-ci.org/mike-north/peepchat-ui)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## This is part of a tutorial
+This is an Ember.js UI that's part of a tutorial series combining [Ember.js](https://github.com/emberjs/ember.js) [Fastboot](https://github.com/ember-fastboot/ember-cli-fastboot) and [Phoenix Framework](https://github.com/phoenixframework/phoenix). 
+
+The beginning of the tutorial is [here](https://medium.com/@mikenorth/building-a-performant-web-app-with-ember-fastboot-and-phoenix-part-1-fa1241654308)
 
 ## Prerequisites
 
