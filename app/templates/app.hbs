@@ -1,1 +1,20 @@
+{{#x-nav title="PEEPchat" as |n|}}
+  <ul id="dropdown1" class="dropdown-content">
+    <li>
+      <a onclick={{route-action "logout"}}>Logout</a>
+    </li>
+  </ul>
+  {{#n.desktop-menu}}
+    <li>
+      <a class="dropdown-button" data-activates="dropdown1">
+        Dropdown <i class="material-icons right">arrow_drop_down</i>
+      </a>
+    </li>
+  {{/n.desktop-menu}}
+  {{#n.side-nav}}
+    <li>
+      <a onclick={{route-action 'logout'}}>Logout</a>
+    </li>
+  {{/n.side-nav}}
+{{/x-nav}}
 {{outlet}}

@@ -1,1 +1,11 @@
+{{#x-nav title="PEEPchat" as |n|}}
+  {{#n.desktop-menu}}
+    {{#n.link-to 'auth.login'}}Login{{/n.link-to}}
+    {{#n.link-to 'auth.register'}}Register{{/n.link-to}}
+  {{/n.desktop-menu}}
+  {{#n.side-nav}}
+    {{#n.link-to 'auth.login'}}Login{{/n.link-to}}
+    {{#n.link-to 'auth.register'}}Register{{/n.link-to}}
+  {{/n.side-nav}}
+{{/x-nav}}
 {{outlet}}
