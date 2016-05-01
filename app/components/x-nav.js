@@ -19,7 +19,7 @@ export default Ember.Component.extend({
     this.$(".dropdown-button").dropdown();
   },
   _setupChildComponent(childComponent) {
-    if (childComponent.classNames.includes('side-nav')) {
+    if (childComponent.classNames.indexOf('side-nav') >= 0) {
       this.set('_sideNavId', childComponent.elementId);
     }
   }
