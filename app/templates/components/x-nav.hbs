@@ -1,0 +1,22 @@
+<nav>
+  <div class="nav-wrapper">
+    <div class="container">
+      {{#if title}}
+        {{link-to title 'index' class='brand-logo'}}
+      {{/if}}
+      <a class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      {{yield (hash
+        desktop-menu=(component 'x-div'
+                        tagName='ul'
+                        classNames="right hide-on-med-and-down")
+        side-nav=(component 'x-div'
+                    tagName='ul'
+                    _parentComponent=this
+                    classNames="side-nav")
+        link-to=(component 'nav-link')
+      )}}
+    </div>
+  </div>
+</nav>
