@@ -1,0 +1,17 @@
+<div class="card room-card">
+  <div class="card-content">
+    {{!-- Scrollable area containing messages --}}
+    <div class="messages-container">
+      {{outlet}}
+    </div>
+  </div>
+  <div class="card-action">
+    {{!-- New message field --}}
+    {{x-input
+      value=newMessage
+      classNames="new-message-field"}}
+    <button class="btn-floating btn-large z-depth-0 send-button right">
+      <i class="material-icons">send</i>
+    </button>
+  </div>
+</div>

@@ -15,4 +15,12 @@ export default function() {
     this.use('toUp'),
     this.reverse('toDown')
   );
+
+  // Enter a room
+  this.transition(
+    this.fromRoute('app.index'),
+    this.toRoute('app.room'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
 }

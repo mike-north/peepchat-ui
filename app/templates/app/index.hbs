@@ -7,7 +7,8 @@
         <ul class="collection">
 
           {{#each model.rooms as |room|}}
-          <li class="collection-item avatar">
+          <li class="collection-item avatar"
+            onclick={{route-action 'enterRoom' room}}>
             <i class="material-icons green circle">chat</i>
             <span class="title">{{room.name}}</span>
             <p class="grey-text">Owner: {{room.owner.email}}</p>

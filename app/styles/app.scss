@@ -55,3 +55,125 @@ body {
   transform: none;
   -webkit-transform: none;
 }
+
+$me-chat-color: color('lime', 'lighten-2');
+$me-chat-text-color: black;
+$them-chat-color: color('indigo', 'darken-3');
+$them-chat-text-color: white;
+
+.room-card {
+  display: flex;
+  height: calc(100vh - 65px);
+  @media #{$small-and-down} {
+    height: calc(100vh - 57px);
+  }
+  .btn-floating {
+    i {
+      width: 1em; // Safari fix
+    }
+  }
+
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  .card-content {
+    flex: 1;
+    overflow: scroll;
+    .messages-container {
+      margin: 0 auto;
+      .message {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 100%;
+        margin-bottom: 20px;
+        &.me {
+          flex-direction: row-reverse;
+          align-items: flex-end;
+          .avatar {
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          .body {
+            background-color: $me-chat-color;
+            box-shadow: -2px -2px 2px rgba(0,0,0,0.2);
+            color: $me-chat-text-color;
+            .timestamp {
+              color: lighten($me-chat-text-color, 40);
+            }
+            &:before {
+              top: auto;
+              right: -12px;
+              bottom: 0;
+              left: auto;
+              border: 6px solid transparent;
+              border-bottom-color: $me-chat-color;
+              border-left-color: $me-chat-color;
+            }
+          }
+        }
+        .avatar {
+          position: relative;
+          display: inline-block;
+          flex-shrink: 0;
+          flex-grow: 0;
+          z-index: 1;
+          height: 96px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .body {
+          display: inline-block;
+          position: relative;
+          background-color: $them-chat-color;
+          padding: 0.5em;
+          color: $them-chat-text-color;
+          box-shadow: -2px -2px 2px rgba(0,0,0,0.2);
+          .timestamp {
+            display: block;
+            margin: .2em;
+            font-size: 80%;
+            color: darken($them-chat-text-color, 20);
+          }
+          &:before {
+            position: absolute;
+            top: 0;
+            left: -12px;
+            content: '';
+            z-index: 2;
+            border: 6px solid transparent;
+            border-top-color: $them-chat-color;
+            border-right-color: $them-chat-color;
+          }
+        }
+      }
+    }
+  }
+  .card-action {
+    background-color: color('grey', 'darken-2');
+    flex: none;
+    padding: 10px 8px 5px 8px;
+    .new-message-field {
+      background-color: color('grey', 'lighten-4');
+      padding: 5px 10px 1px 10px;
+      margin: 0.3em 0 0 0;
+      border-radius: 5px;
+      display: inline-block;
+      width: calc(100% - 120px);
+      input {
+        margin-bottom: 0;
+        border: 0;
+        &:focus:not([readonly]),
+        &.validate {
+          border: 0;
+          box-shadow: none;
+        }
+      }
+    }
+    .send-button {
+      margin: 0 0.3em 0.3em 0.3em;
+    }
+  }
+}
+
