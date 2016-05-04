@@ -33,7 +33,7 @@
       {{#x-card
         title='Create a new room'
         buttonText='Create'
-        onsubmit=(route-action 'logout')}}
+        onsubmit=(route-action 'createRoom')}}
         <div class="row">
           {{x-input value=model.newRoom.name label="Room Name" classNames='col s12' errors=model.newRoom.errors}}
         </div>
