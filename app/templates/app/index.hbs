@@ -3,14 +3,9 @@
     <div class="col s12 m8 offset-m2">
 
       {{#x-card
-        buttonText='Logout'
-        onsubmit=(route-action 'logout')
-        title='Welcome to Peepchat!'}}
+        title='Rooms'}}
+        <ul class="collection">
 
-        <ul class="collection with-header">
-          <li class="collection-header">
-            <h4>Rooms</h4>
-          </li>
           {{#each model.rooms as |room|}}
           <li class="collection-item avatar">
             <i class="material-icons green circle">chat</i>
@@ -32,17 +27,14 @@
             </li>
           {{/each}}
         </ul>
+      {{/x-card}}
 
-        <div class="row create-room">
-          {{x-input value=model.newRoom.name label="Room Name" classNames='col s8' errors=model.newRoom.errors}}
-          <div class="col s4">
-
-            {{!-- CREATE ROOM BUTTON --}}
-            <button class="btn-flat green white-text" onclick={{route-action 'createRoom'}}>
-              Create Room
-            </button>
-
-          </div>
+      {{#x-card
+        title='Create a new room'
+        buttonText='Create'
+        onsubmit=(route-action 'logout')}}
+        <div class="row">
+          {{x-input value=model.newRoom.name label="Room Name" classNames='col s12' errors=model.newRoom.errors}}
         </div>
       {{/x-card}}
     </div>
