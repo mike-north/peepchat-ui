@@ -4,7 +4,7 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   body: attr('string'),
-  owner: belongsTo('user'),
+  author: belongsTo('user'),
   room: belongsTo('room'),
   insertedAt: attr('date'),
   updatedAt: attr('date')

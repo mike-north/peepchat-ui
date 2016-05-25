@@ -47,7 +47,7 @@ export default Ember.Route.extend({
 
       if (buttons.indexOf(targetText) < 0) { // Button check
         // Enter the room
-        this.transitionTo('app.room.index', room);
+        this.transitionTo('app.room.index', room.get('id'));
       }
     }
   },

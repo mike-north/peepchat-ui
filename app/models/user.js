@@ -6,5 +6,7 @@ export default Model.extend({
   email: attr('string'),
   password: attr('string'),
   passwordConfirmation: attr('string'),
-  rooms: hasMany('room')
+  gravatar: attr('string'),
+  rooms: hasMany('room'),
+  messages: hasMany('message')
 });
