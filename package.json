@@ -37,7 +37,7 @@
     "ember-cp-validations": "2.9.5",
     "ember-data": "^2.4.2",
     "ember-export-application-global": "^1.0.5",
-    "ember-load-initializers": "^0.5.1",
+    "ember-load-initializers": "^0.6.1",
     "ember-material-design-icons-shim": "0.1.7",
     "ember-materialize-shim": "0.4.0",
     "ember-network": "0.3.0",
