@@ -34,7 +34,7 @@
     "ember-cli-sass": "git://github.com/mike-north/ember-cli-sass.git#8ceb57d41f5774e8ececb5d1f05454449c19000c",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-cp-validations": "2.9.5",
+    "ember-cp-validations": "3.2.1",
     "ember-data": "^2.4.2",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
