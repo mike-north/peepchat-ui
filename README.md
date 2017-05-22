@@ -1,5 +1,7 @@
 # Peepchat-UI [![Build Status](https://travis-ci.org/mike-north/peepchat-ui.svg?branch=master)](https://travis-ci.org/mike-north/peepchat-ui)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/peepchat-ui.svg)](https://greenkeeper.io/)
+
 ## This is part of a tutorial
 This is an Ember.js UI that's part of a tutorial series combining [Ember.js](https://github.com/emberjs/ember.js) [Fastboot](https://github.com/ember-fastboot/ember-cli-fastboot) and [Phoenix Framework](https://github.com/phoenixframework/phoenix). 
 
